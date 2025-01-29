@@ -11,7 +11,7 @@ local function file_exists(filepath)
 end
 
 -- Runs a yolo file in project root if it exists
-function runner.run_config(yolo_file)
+function runner.yolo_file(yolo_file)
   -- TODO: check if yolo_file is in config["yolo_files"] and raise no yolo file error otherwise (?)
   local project_root = vim.fn.getcwd()
   local path_sep = package.config:sub(1, 1)
@@ -24,7 +24,7 @@ end
 -- Runs all yolo files
 function runner.yolo()
   for index, value in ipairs(config["yolo_files"]) do
-    runner.run_config(value)
+    runner.yolo_file(value)
   end
 end
 

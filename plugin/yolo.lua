@@ -9,7 +9,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
   "YoloFile",
   function(opts)
-    require("yolo").run_config(opts.args)
+    require("yolo").yolo_file(opts.args)
   end,
   { nargs = 1 }
 )
