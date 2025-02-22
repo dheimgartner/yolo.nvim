@@ -13,7 +13,7 @@ local function add_to_runtimepath(base_dir)
 end
 
 -- Call the function with your `bar` directory
-local plugins = "~/github/nvim_plugins"
+local plugins = "~/nvim_plugins"
 add_to_runtimepath(vim.fn.expand(plugins))
 
 require("oil").setup()
